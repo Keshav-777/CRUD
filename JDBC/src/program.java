@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class Program {
+public class program {
 	static String url = "jdbc:mysql://localhost:3306/jdbc";
 	static String username = "root";
 	static String password = "root";
@@ -33,13 +33,13 @@ public class Program {
 
 		finally {
 
-			close();
+			close(con,stm);
 
 		}
 
 	}
 
-	public static void close() {
+	public static void close(Connection con,Statement stm) {
 		try {
 			if (result != null)
 				result.close();
