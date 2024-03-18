@@ -21,6 +21,7 @@ public class Program {
 			stm = con.createStatement(); // SQL statement
 			String query = "select * from employee;";
 			result = stm.executeQuery(query); // execute SQL Query
+			
 			while(result.next()) {
 				System.out.println(result.getInt(1)+" "+result.getString(2)+" "+
 									result.getString(3)+" "+result.getInt(4));
